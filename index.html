@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn meditation with phoebe - a secular, honest on-ramp to a real practice</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card {
+    border: 1px solid var(--hairline);
+    border-top: 4px solid var(--diff, var(--indigo));
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    text-decoration: none;
+    color: var(--ink);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease;
+    position: relative;
+  }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(70,87,143,.16); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff, #F3F4F9); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+
+  .note-band { margin-top: 1.4rem; background: var(--amber-50); border: 1px solid var(--hairline); border-left: 4px solid var(--amber); border-radius: 12px; padding: .9rem 1.1rem; font-size: .88rem; color: var(--ink); }
+  .note-band b { color: var(--amber-ink); }
+
+  .project-band { margin-top: 1.4rem; background: var(--indigo-50); border: 1px solid var(--hairline); border-left: 4px solid var(--indigo); border-radius: 12px; padding: .9rem 1.1rem; font-size: .88rem; color: var(--ink); }
+  .project-band b { color: var(--indigo-deep); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn Meditation with Phoebe</div>
+    <h1>Meditation for skeptics: a <span class="accent">secular, honest</span> on-ramp</h1>
+    <p class="sub">Six sessions that teach you to actually sit - the breath, the body, the wandering mind, and the styles beyond - with plain talk about what research really shows, what tradition claims, and where the two differ. You leave with your own 4-week starter practice, built one piece per session.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="6">6</b><span>sessions</span></div>
+      <div class="stat"><b data-count="4">4</b><span>breath patterns in the pacer</span></div>
+      <div class="stat"><b data-count="4">4</b><span>week starter plan you build</span></div>
+      <div class="stat"><b data-count="45">45</b><span>min per session</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="course-grid">
+      <a class="course-card" href="courses/01-why-meditate.html" style="--diff:#34D399">
+        <span class="cicon">🌅</span>
+        <span class="cnum">Session 1 · easiest</span>
+        <h3>Why meditate: what it is, isn't, and what the research shows</h3>
+        <p>Meditation without the incense: what the practice actually trains, what the studies genuinely found (and the hype they didn't support), and your honest reason to start.</p>
+        <span class="meta"><span class="pill amber">▶ Start here</span><span class="pill light">Foundations</span></span>
+      </a>
+      <a class="course-card" href="courses/02-the-breath.html" style="--diff:#34D399">
+        <span class="cicon">🌬️</span>
+        <span class="cnum">Session 2 · easiest</span>
+        <h3>The breath: your anchor + the breath pacer</h3>
+        <p>Why every tradition starts with the breath, four patterns worth knowing, and a hands-on session with the built-in breath pacer - a real tool you keep using after the course.</p>
+        <span class="meta"><span class="pill light">Practice + pacer</span></span>
+      </a>
+      <a class="course-card" href="courses/03-body-posture.html" style="--diff:#FBBF24">
+        <span class="cicon">🪑</span>
+        <span class="cnum">Session 3 · building</span>
+        <h3>Body &amp; posture: the body scan and how to sit</h3>
+        <p>You do not need the lotus pose. Chairs count. The body scan technique, posture options ranked by comfort, and what to do when your knee complains.</p>
+        <span class="meta"><span class="pill light">Practice</span></span>
+      </a>
+      <a class="course-card" href="courses/04-wandering-mind.html" style="--diff:#FBBF24">
+        <span class="cicon">💭</span>
+        <span class="cnum">Session 4 · building</span>
+        <h3>The wandering mind: the actual skill you are training</h3>
+        <p>Mind-wandering is not failure - noticing it IS the rep. The notice-and-return mechanic, plus the classic obstacles (sleepiness, restlessness, doubt) and their fixes.</p>
+        <span class="meta"><span class="pill light">Core mechanic</span></span>
+      </a>
+      <a class="course-card" href="courses/05-beyond-the-breath.html" style="--diff:#FBBF24">
+        <span class="cicon">🧭</span>
+        <span class="cnum">Session 5 · building</span>
+        <h3>Beyond the breath: styles, traditions, and picking yours</h3>
+        <p>Open awareness, loving-kindness, walking meditation - and an honest one-page tour of the traditions behind them: vipassana, Zen, TM, and secular mindfulness.</p>
+        <span class="meta"><span class="pill light">Styles + traditions</span></span>
+      </a>
+      <a class="course-card" href="courses/06-making-it-stick.html" style="--diff:#FB923C">
+        <span class="cicon">🌱</span>
+        <span class="cnum">Session 6 · deepening</span>
+        <h3>Making it stick: habit, apps, cautions &amp; your 4-week plan</h3>
+        <p>Habit design that survives a busy week, apps vs sitting unguided, who should be cautious and why, honest progress markers - and your finished 4-week starter plan.</p>
+        <span class="meta"><span class="pill light">Your plan</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easiest - start here</span>
+      <span><i style="background:#FBBF24"></i>building - the practice</span>
+      <span><i style="background:#FB923C"></i>deepening - making it yours</span>
+    </div>
+
+    <div class="project-band">
+      <b>🧩 The running project: your 4-week starter plan.</b> Every session ends with one concrete step - your why, your anchor, your posture, your obstacle playbook, your technique mix - and Session 6 assembles them into a printable 4-week practice plan that is actually yours, not a template.
+    </div>
+
+    <div class="note-band">
+      <b>The honesty rail.</b> This course separates three kinds of claims and labels them: what research supports (with the actual effect sizes), what tradition says (marked "traditionally said to"), and what is marketing. Meditation is a skill worth learning - it is not a cure-all, it is not for everyone, and we will say so plainly.
+    </div>
+
+    <div class="paths">
+      <h2>Choose your focus 🧭</h2>
+      <p class="plede">Everyone starts at Session 1 for the map and the honest evidence baseline. After that, follow what you need - or take all six in order.</p>
+      <div class="path"><b>🌬️ I want to practice today</b>
+        <a class="pstep" href="courses/02-the-breath.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-body-posture.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-wandering-mind.html">4</a>
+      </div>
+      <div class="path"><b>🔬 Convince the skeptic in me</b>
+        <a class="pstep" href="courses/01-why-meditate.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-making-it-stick.html">6</a>
+      </div>
+      <div class="path"><b>📿 The full journey</b>
+        <a class="pstep" href="courses/01-why-meditate.html">1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/02-the-breath.html">2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/03-body-posture.html">3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/04-wandering-mind.html">4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/05-beyond-the-breath.html">5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/06-making-it-stick.html">6</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">The whole course at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-meditation-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> · secular, evidence-honest, tradition-respectful</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Meditation",
+  centerColor: "#2A3356",
+  sessions: [
+    { label: "Why\nmeditate", href: "courses/01-why-meditate.html", color: "#34D399",
+      concepts: [
+        { label: "What it trains", href: "courses/01-why-meditate.html" },
+        { label: "The real evidence", href: "courses/01-why-meditate.html" },
+        { label: "Your why", href: "courses/01-why-meditate.html" } ] },
+    { label: "The\nbreath", href: "courses/02-the-breath.html", color: "#34D399",
+      concepts: [
+        { label: "Anchor attention", href: "courses/02-the-breath.html" },
+        { label: "Four patterns", href: "courses/02-the-breath.html" },
+        { label: "The breath pacer", href: "courses/02-the-breath.html" } ] },
+    { label: "Body &\nposture", href: "courses/03-body-posture.html", color: "#FBBF24",
+      concepts: [
+        { label: "The body scan", href: "courses/03-body-posture.html" },
+        { label: "How to sit", href: "courses/03-body-posture.html" },
+        { label: "Discomfort", href: "courses/03-body-posture.html" } ] },
+    { label: "Wandering\nmind", href: "courses/04-wandering-mind.html", color: "#FBBF24",
+      concepts: [
+        { label: "Notice & return", href: "courses/04-wandering-mind.html" },
+        { label: "The obstacles", href: "courses/04-wandering-mind.html" },
+        { label: "Thoughts & feelings", href: "courses/04-wandering-mind.html" } ] },
+    { label: "Beyond\nthe breath", href: "courses/05-beyond-the-breath.html", color: "#FBBF24",
+      concepts: [
+        { label: "Open awareness", href: "courses/05-beyond-the-breath.html" },
+        { label: "Loving-kindness", href: "courses/05-beyond-the-breath.html" },
+        { label: "The traditions", href: "courses/05-beyond-the-breath.html" } ] },
+    { label: "Making\nit stick", href: "courses/06-making-it-stick.html", color: "#FB923C",
+      concepts: [
+        { label: "Habit design", href: "courses/06-making-it-stick.html" },
+        { label: "Apps & cautions", href: "courses/06-making-it-stick.html" },
+        { label: "Your 4-week plan", href: "courses/06-making-it-stick.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>
